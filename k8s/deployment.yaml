@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: python-basic
+  name: python-basic
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-basic
+  template:
+    metadata:
+      labels:
+        app: python-basic
+    spec:
+      containers:
+        - image: image-registry.openshift-image-registry.svc:5000/eric/python-basic
+          imagePullPolicy: Always
+          name: python-basic
