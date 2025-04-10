@@ -15,6 +15,6 @@ spec:
         app: python-basic
     spec:
       containers:
-        - image: image-registry.openshift-image-registry.svc:5000/eric/python-basic
+        - image: image-registry.openshift-image-registry.svc:5000/nataliia-pipelines/devfile-sample-python-basic:latest
           imagePullPolicy: Always
           name: python-basic
